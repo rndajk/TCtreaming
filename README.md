@@ -9,18 +9,21 @@ TCtreaming is build by open broadcaster software or broadcast me, nginx, projekk
 ###### 1. Video Streaming
 --  **Server** --
 > Installing nginx with RTMP module
-  - installing tools for nginx
-  ```sh
+  - Installing tools for nginx
+  
+```sh
 $ sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev
 ```
   - Download nginx and RTMP Module
-  ```sh
+  
+```sh
 $ wget http://nginx.org/download/nginx-1.9.15.tar.gz
 ```
 ```sh
 $ wget https://github.com/arut/nginx-rtmp-module/archive/master.zip
 ```
   - Unpack the downloaded package
+  
 ```sh
 $ tar -zxvf nginx-1.9.15.tar.gz
 $ unzip master.zip
@@ -62,19 +65,19 @@ $ sudo /usr/local/nginx/sbin/nginx
 
 ###### 2. Chatting
 --  **Server** --
-- Install NodeJs
+ - Install NodeJs
 ```sh
 $ sudo apt-get update
 $ sudo apt-get install nodejs
 $ sudo apt install nodejs-legacy
 ```
-- Instalasi NPM
+ - Installing NPM
 ```sh
 sudo apt-get install npm
 ```
-- Instalasi nodemon
+ - Installing Forever Start
 ```sh
-sudo npm install -g nodemon
+sudo npm -g install forever
 ```
 
 #### FILES REQUIREMENT
@@ -85,16 +88,20 @@ sudo npm install -g nodemon
  - Edit The IP in the index.html at html directory
  - Start Nginx server - if nginx already started do next stage
  - open TChat directory
- ```sh
+```sh
 cd /usr/local/nginx/html/TChat
 ```
- - Start NodeJs Server using nodemon
+ - Start NodeJs Server using forever start
 ```sh
-nodemon index.js
+forever start index.js
+```
+ - To Stop
+```sh
+forever stop index.js
 ```
 
 #### HOW TO USE TCtreaming FOR STREAMER
-- Use Open Broadcaster Software (OBS)
+ - Use Open Broadcaster Software (OBS)
 ```sh
 Streaming Service: Custom
 Server: rtmp://<your server ip>/live
