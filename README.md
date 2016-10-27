@@ -115,3 +115,4 @@ rtmp://<your server ip>/live/test/
 ```
 All Done.
 
+Reference https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/
